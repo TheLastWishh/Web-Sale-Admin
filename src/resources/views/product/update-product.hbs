@@ -1,0 +1,96 @@
+<div class='main'>
+    <div class='container-fluid'>
+        <!-- Breadcrumbs -->
+        <div id='breadcrumb'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <ul class='breadcrumb-tree'>
+                        <li class='active'>Thêm sản phẩm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class='data-table'>
+            <div class='table-body'>
+                <form action='/product/update' method='POST' class='row'>
+                    <div class='col-md-4'>
+                        <label for='productID' class='form-label'>Mã sản phẩm</label>
+                        <br />
+                        <input id='productID' name='productID' class='form-control' type='text' placeholder='{{productInfo.ProductID}}' value='{{productInfo.ProductID}}' />
+                    </div>
+                    <div class='col-md-8'>
+                        <label for='productName' class='form-label'>Tên sản phẩm</label>
+                        <br />
+                        <input Name='productName' name='productName' class='form-control' type='text' placeholder='{{productInfo.ProductName}}' value='{{productInfo.ProductName}}' />
+                    </div>
+                    <div class='col-md-4 mt-2'>
+                        <label for='productID' class='form-label'>Phân loại</label>
+                        <br />
+                        <select name='productCategoryID' id='productCategoryID' class='form-select form-control'>
+                            <option value='{{productInfo.ProductCategoryID}}'>{{productInfo.ProductCategoryName}}</option>
+                            <option value='AC'>Điều hòa nhiệt độ</option>
+                            <option value='AF'>Lọc không khí</option>
+                            <option value='AS'>Loa - Âm thanh</option>
+                            <option value='CK'>Nồi cơm</option>
+                            <option value='FAN'>Quạt</option>
+                            <option value='FD1'>Tủ lạnh</option>
+                            <option value='FD2'>Tủ mát</option>
+                            <option value='HT'>Bình nóng lạnh</option>
+                            <option value='IIC'>Bếp từ, hồng ngoại</option>
+                            <option value='TLVS'>Ti vi</option>
+                            <option value='WM'>Máy giặt</option>
+                            <option value='WT'>Máy lọc nước</option>
+                        </select>
+                    </div>
+                    <div class='col-md-4 mt-2'>
+                        <label for='supplierID' class='form-label'>Nhà cung cấp</label>
+                        <br />
+                        <select name='supplierID' id='supllierID' class='form-select form-control'>
+                            <option value='{{productInfo.SupplierID}}'>{{productInfo.SupplierName}}</option>
+                            <option value='AQ'>Aqua</option>
+                            <option value='CP'>Casper</option>
+                            <option value='KG'>Kangaroo</option>
+                            <option value='LG'>LG</option>
+                            <option value='PNSN'>Panasonic</option>
+                            <option value='SN'>Sony</option>
+                            <option value='SP'>Sharp</option>
+                            <option value='SS'>Samsung</option>
+                            <option value='TCL'>TCL</option>
+                            <option value='TSB'>Toshiba</option>
+                        </select>
+                    </div>
+                    <div class='col-md-4 mt-2'>
+                        <label for='quantity' class='form-label'>Số lượng</label>
+                        <br />
+                        <input id='quantity' name='quantity' class='form-control' type='number' value='{{productInfo.Quantity}}' />
+                    </div>
+                    <div class='col-md-6 mt-2'>
+                        <label for='costPrice' class='form-label'>Giá gốc</label>
+                        <br />
+                        <input id='costPrice' name='costPrice' class='form-control' type='number' value='{{productInfo.CostPrice}}' />
+                    </div>
+                    <div class='col-md-6 mt-2'>
+                        <label for='price' class='form-label'>Giá bán</label>
+                        <br />
+                        <input id='price' name='price' class='form-control' type='number' value='{{productInfo.Price}}' />
+                    </div>
+                    <div class='col-md-12 mt-2'>
+                        <label for='imgProduct' class='form-label'>Hình ảnh</label>
+                        <br />
+                        <input id='imgProduct' name='imgProduct' class='form-control' type='text' value='{{productInfo.ImgProduct}}' />
+                    </div>
+                    <div class='col-md-12 mt-2'>
+                        <label for='description' class='form-label'>Tên sản phẩm</label>
+                        <br />
+                        <textarea class='input' name='description' placeholder='{{productInfo.Description}}'>{{productInfo.Description}}</textarea>
+                    </div>
+                    <div class='col-md-12 mt-2'>
+                        <button type='submit' class='btn btn-primary' style='width: 100%'>Cập nhật thông tin</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

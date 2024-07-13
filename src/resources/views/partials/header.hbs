@@ -1,0 +1,42 @@
+{{! Top Header }}
+<div id='top-header'>
+    <div class='container-fluid d-flex justify-content-between'>
+        <ul class='header-links'>
+            <li><a href='#'><i class='fa-solid fa-phone-volume'></i>
+                    +021-95-51-84</a></li>
+            <li><a href='#'><i class='fa-regular fa-envelope'></i>
+                    abcxyz@gmail.com</a></li>
+            <li><a href='#'><i class='fa-solid fa-location-dot'></i>
+                    xx Hai Bà Trưng, Hà Nội</a></li>
+        </ul>
+        <ul class='header-links'>
+            <li><a href='#'><i class='fa-solid fa-dollar-sign'></i>
+                    USD</a></li>
+            <li>
+                {{#if user}}
+                    <a href='#'><i class='fa-regular fa-circle-user'></i>
+                        {{user.username}}</a>
+                    <a href='/sign-out'><i class='fa-solid fa-right-from-bracket'></i>
+                        Đăng xuất</a>
+                {{else}}
+                    <a href='#'><i class='fa-regular fa-circle-user'></i>
+                        My Account</a>
+                {{/if}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+{{! MAIN HEADER }}
+<div id='main-header'>
+    <div class='container-fluid'>
+        <div class='row d-flex align-items-center'>
+            {{! LOGO }}
+            <div class='col-md-3'>
+                <div class='header-logo'>
+                    <a href='/' class='logo'><img src='/img/logo.png' alt='ElectroHub' /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

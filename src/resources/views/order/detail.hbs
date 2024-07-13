@@ -1,0 +1,57 @@
+<div class='main'>
+    <div class='container-fluid'>
+        <!-- Breadcrumbs -->
+        <div id='breadcrumb'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <ul class='breadcrumb-tree'>
+                        <li class='active'>Mã hóa đơn: {{purchaseOrderID}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DataTables -->
+        <div class='data-table'>
+            <div class='table-title'>
+                <div class='table-content'>
+                    <i class='fa-solid fa-table'></i>
+                    Danh sách đặt mua
+                </div>
+            </div>
+            <div class='table-body'>
+                <div class='table-responsive'>
+                    <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
+                        <thead>
+                            <tr>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#if purchaseOrderDetail}}
+                                {{#each purchaseOrderDetail}}
+                                    <tr>
+                                        <th scope='row'>{{this.ProductID}}</th>
+                                        <th>{{this.ProductName}}</th>
+                                        <td>{{this.Price}}</td>
+                                        <td>{{this.OrderedQuantity}}</td>
+                                        <td>{{this.TotalPrice}}</td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class='table-footer'>
+                <i class='fa-solid fa-money-bill'></i>
+                Phải thanh toán:
+                {{total}}<i class='fa-solid fa-dong-sign'></i>
+            </div>
+        </div>
+    </div>
+</div>

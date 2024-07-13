@@ -1,0 +1,77 @@
+<div class='main'>
+    <div class='container-fluid'>
+        <!-- Breadcrumbs -->
+        <div id='breadcrumb'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <ul class='breadcrumb-tree'>
+                        <li class='active'>Chỉnh sửa sản phẩm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DataTables -->
+        <div class='data-table'>
+            <div class='table-title'>
+                {{! <i class='fa-solid fa-table'></i>
+                Danh sách sản phẩm }}
+                <div class='table-content'>
+                    <i class='fa-solid fa-table'></i>
+                    Danh sách sản phẩm
+                </div>
+                <div class='btn-group category'>
+                    <button type='button' class='btn btn-primary dropdown-toggle' data-bs-toggle='dropdown' aria-expanded='false'>
+                        Danh mục sản phẩm
+                    </button>
+                    <ul class='dropdown-menu'>
+                        {{#if category}}
+                            {{#each category}}
+                                <li><a class='dropdown-item' href='/product/{{this.ProductCategoryID}}/edit'>{{this.ProductCategoryName}}</a></li>
+                            {{/each}}
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+            <div class='table-body'>
+                <div class='table-responsive'>
+                    <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
+                        <thead>
+                            <tr>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Phân loại</th>
+                                <th>Mã nhà cung cấp</th>
+                                <th>Số lượng</th>
+                                <th>Giá gốc(VNĐ)</th>
+                                <th>Giá bán(VNĐ)</th>
+                                <th>Sửa</th>
+                            </tr>
+                        </thead>
+                        <tbody id='list'>
+                            {{#if listProducts}}
+                                {{#each listProducts}}
+                                    <tr class='item'>
+                                        <th scope='row'>{{this.ProductID}}</th>
+                                        <td>{{this.ProductName}}</td>
+                                        <td>{{this.ProductCategoryID}}</td>
+                                        <td>{{this.SupplierID}}</td>
+                                        <td>{{this.Quantity}}</td>
+                                        <td>{{this.CostPrice}}</td>
+                                        <td>{{this.Price}}</td>
+                                        <td class='d-flex justify-content-center'>
+                                            <a href='/product/edit/{{this.ProductID}}'>
+                                                <button type='button' class='btn btn-outline-primary'>Sửa</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+                        </tbody>
+                    </table>
+                    <ul class='listPage'></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

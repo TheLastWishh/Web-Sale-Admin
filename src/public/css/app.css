@@ -1,0 +1,370 @@
+/*=========================================================
+	01 -> GENERAL
+===========================================================*/
+/*----------------------------*\
+	Typography
+\*----------------------------*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2b2d42;
+  font-weight: 700;
+  margin: 0 0 10px; }
+
+a {
+  color: #2b2d42;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color; }
+
+a:hover,
+a:focus {
+  color: #d10024;
+  text-decoration: none;
+  outline: none; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/*----------------------------*\
+	Table
+\*----------------------------*/
+table {
+  border-collapse: collapse; }
+
+.data-table {
+  margin-bottom: 10px; }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/*----------------------------*\
+	Inputs
+\*----------------------------*/
+.input {
+  height: 40px;
+  padding: 0px 15px;
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  width: 100%; }
+
+textarea.input {
+  padding: 15px;
+  min-height: 90px; }
+
+.input-number {
+  position: relative; }
+
+.input-number input[type='number']::-webkit-inner-spin-button,
+.input-number input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.input-number input[type='number'] {
+  -moz-appearance: textfield;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  padding: 0px 35px 0px 15px; }
+
+.input-number .qty-up,
+.input-number .qty-down {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.input-number .qty-up {
+  right: 0;
+  top: 0;
+  border-bottom: 0px; }
+
+.input-number .qty-down {
+  right: 0;
+  bottom: 0; }
+
+.input-number .qty-up:hover,
+.input-number .qty-down:hover {
+  background-color: #e4e7ed;
+  color: #d10024; }
+
+/*----------------------------*\
+	Breadcrumbs
+\*----------------------------*/
+#breadcrumb {
+  padding: 10px 0px;
+  background: #e9ecef;
+  border-bottom: 1px solid #e4e7ed;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px 5px 5px 5px; }
+
+#breadcrumb .breadcrumb-tree {
+  display: inline-block; }
+
+#breadcrumb .breadcrumb-tree li {
+  display: inline-block;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 1.2rem; }
+
+/*----------------------------*\
+	Pagination
+\*----------------------------*/
+.listPage {
+  display: flex;
+  justify-content: center; }
+
+.listPage li {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #007bff;
+  transition: background-color 0.3s, color 0.3s; }
+
+.listPage li:hover {
+  background-color: #007bff;
+  color: white; }
+
+.listPage li.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff; }
+
+.listPage li:active {
+  background-color: #0056b3;
+  color: white;
+  border-color: #0056b3; }
+
+.listPage li.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  border-color: #ccc; }
+
+/*=========================================================
+	01 -> GENERAL
+===========================================================*/
+.aside {
+  height: 100%;
+  background-color: #15161d; }
+
+.accordion-header button {
+  color: #ffffff; }
+
+.accordion-button {
+  background-color: #15161d;
+  color: white;
+  border-bottom-color: none; }
+
+.accordion-button:not(.collapsed) {
+  background-color: #495057;
+  color: white; }
+
+.accordion-body {
+  background-color: #212529;
+  color: white; }
+
+.accordion-body .menu > a {
+  display: block;
+  background-color: #212529;
+  color: white;
+  margin: 5px 0;
+  border-bottom: solid 0.1px #bcb5b5; }
+
+.accordion-body .menu > a:hover,
+.accordion-body .menu > a:focus {
+  color: #d10024;
+  text-decoration: none;
+  outline: none; }
+
+.accordion-header button span {
+  margin-left: 5px; }
+
+/*=========================================================
+	02 -> HEADER
+===========================================================*/
+/*----------------------------*\
+	Top header
+\*----------------------------*/
+#top-header {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background-color: #1e1f29; }
+
+.header-links {
+  margin: 0; }
+
+.header-links li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px; }
+
+.header-links li:last-child {
+  margin-right: 0; }
+
+.header-links li a {
+  color: #fff; }
+
+.header-links li a:hover {
+  color: #d10024; }
+
+.header-links li i {
+  color: #d10024;
+  margin-right: 5px; }
+
+/*----------------------------*\
+	Logo
+\*----------------------------*/
+#main-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #15161d; }
+
+.header-logo {
+  float: left; }
+
+.header-logo .logo img {
+  display: block;
+  width: 15rem; }
+
+/*=========================================================
+	03 -> FOOTER
+===========================================================*/
+#footer {
+  background: #15161d;
+  color: #b9babc; }
+
+#bottom-footer {
+  background: #1e1f29; }
+
+.footer {
+  margin: 30px 0px; }
+
+.footer .footer-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0px 0px 30px; }
+
+.footer-links li + li {
+  margin-top: 15px; }
+
+.footer-links li a {
+  color: #b9babc; }
+
+.footer-links li i {
+  margin-right: 15px;
+  color: #d10024;
+  width: 14px;
+  text-align: center; }
+
+.footer-links li a:hover {
+  color: #d10024; }
+
+/*=========================================================
+	04 -> Login Form
+===========================================================*/
+.login {
+  position: relative;
+  padding-top: 30px;
+  border-radius: 10px; }
+
+.login .login-form,
+.login .register-form {
+  padding: 30px;
+  background: #ffffff;
+  margin-bottom: 30px; }
+
+.login-form,
+.register-form {
+  padding: 2% 10%;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1); }
+
+.login-form .noti {
+  color: #d10024;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 2px; }
+
+/*=========================================================
+	04 -> MANAGE USERS
+===========================================================*/
+.data-table {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; }
+
+.table-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+.table-content {
+  display: inline-block; }
+
+.table-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem; }
+
+.table-footer {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+/*=========================================================
+	04 -> MANAGE PRODUCT
+===========================================================*/
+.table-body textarea {
+  height: 200px; }
+
+.category {
+  float: right; }

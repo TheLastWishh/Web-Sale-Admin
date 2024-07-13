@@ -1,0 +1,61 @@
+<div class='main'>
+    <div class='container-fulid'>
+        <!-- Breadcrumbs -->
+        <div id='breadcrumb'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <ul class='breadcrumb-tree'>
+                        <li class='active'>Khóa người dùng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DataTables -->
+        <div class='data-table'>
+            <div class='table-title'>
+                <div class='table-content'>
+                    <i class='fa-solid fa-table'></i>
+                    Danh sách người dùng
+                </div>
+            </div>
+            <div class='table-body'>
+                <div class='table-responsive'>
+                    <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
+                        <thead>
+                            <tr>
+                                <th>Mã người dùng</th>
+                                <th>Email</th>
+                                <th>Họ</th>
+                                <th>Tên</th>
+                                <th>Địa chỉ</th>
+                                <th>Số điện thoại</th>
+                                <th>Khóa người dùng</th>
+                            </tr>
+                        </thead>
+                        <tbody id='list'>
+                            {{#if listUser}}
+                                {{#each listUser}}
+                                    <tr class='item'>
+                                        <th scope='row'>{{this.UserID}}</th>
+                                        <th>{{this.Email}}</th>
+                                        <td>{{this.FirstName}}</td>
+                                        <td>{{this.LastName}}</td>
+                                        <td>{{this.Address}}</td>
+                                        <td>{{this.PhoneNumber}}</td>
+                                        <td class='d-flex justify-content-center'>
+                                            <a href='/user/unlock/{{this.UserID}}'>
+                                                <button type='button' class='btn btn-outline-primary'>Mở khóa</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+                        </tbody>
+                    </table>
+                    <ul class='listPage'></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
