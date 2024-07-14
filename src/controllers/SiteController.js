@@ -32,7 +32,6 @@ class SiteController {
                 }
 
                 let user = rows[0];
-                console.log(user);
 
                 if (user.LockUser === `Lock`) {
                     let message = 'Tài khoản của bạn đã bị khóa';

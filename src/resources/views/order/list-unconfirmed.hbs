@@ -30,6 +30,7 @@
                                 <th>Tổng tiền</th>
                                 <th>Phương thức thanh toán</th>
                                 <th>Xác nhận đơn hàng</th>
+                                <th>Hủy đơn</th>
                             </tr>
                         </thead>
                         <tbody id='list'>
@@ -44,6 +45,11 @@
                                         <td class='d-flex justify-content-center'>
                                             <a href='/order/confirm/{{this.PurchaseOrderID}}'>
                                                 <button type='button' class='btn btn-outline-primary'>Xác nhận</button>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href='/order/cancel/{{this.PurchaseOrderID}}'>
+                                                <button type='button' class='btn btn-outline-danger'>Hủy</button>
                                             </a>
                                         </td>
                                     </tr>

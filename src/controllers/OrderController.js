@@ -78,6 +78,12 @@ class OrderController {
         let total = purchaseOrderInfo.Total;
         res.render('order/detail', {purchaseOrderID: purchaseOrderID, purchaseOrderDetail: purchaseOrderDetail, total: total, user: user});
     }
+
+    async cancelOrder(req, res) {
+        let purchaseOrderID = req.params.purchaseOrderID;
+        await modelOrder.cancelOrder(purchaseOrderID);
+        res.redirect('/order/unconfimred');
+    }
 }
 
 module.exports = new OrderController();

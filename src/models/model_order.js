@@ -145,3 +145,18 @@ exports.getPurchaseOrderDetail = async (purchasrOrderID) => {
         throw err;
     }
 };
+
+exports.cancelOrder = (purchaseOrderID) => {
+    try {
+        let sql1 = `DELETE FROM purchaseorderdetail
+                    WHERE PurchaseOrderID = ?;`;
+        db.query(sql1, [purchaseOrderID]);
+
+        let sql2 = `DELETE FROM purchaseorder
+                    WHERE PurchaseOrderID = ?;`;
+        db.query(sql2, [purchaseOrderID]);
+    } catch (err) {
+        console.log(err);
+        throw err;
+    }
+};

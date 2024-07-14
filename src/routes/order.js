@@ -7,6 +7,7 @@ router.get('/confirm/:purchaseOrderID', orderController.confirm);
 router.get('/delivery', orderController.listOrdersDelivery);
 router.get('/deliver/:purchaseOrderID', orderController.deliver);
 router.get('/delivered', orderController.listOrdersDelivered);
+router.get('/cancel/:purchaseOrderID', orderController.cancelOrder);
 router.get('/detail/:purchaseOrderID', orderController.detail);
 router.get('/', orderController.listOrders);
 
